@@ -1,0 +1,363 @@
+
+
+
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+*,::after,::before{box-sizing:border-box}html{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}hr{height:0;color:inherit}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+*/
+
+
+
+*,*::after,*::before{ 
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+
+:root{
+     --bg-color:#fff;
+     --theme-color:#d65f5f;
+     --icon-color:#d65f5f;
+     
+
+ }
+ 
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Open Sans';
+    font-size:16px ;
+    background-color:var(--bg-color);
+    
+    }
+a{
+    color:#fff; 
+    text-decoration:none;
+    color:inherit;
+}
+ul{
+    list-style:none;
+}
+
+
+
+
+/*======================
+        Contenedores 
+======================*/
+
+
+.section{ 
+    padding: 6rem 0rem ;
+    margin: 0 auto;
+    max-width: 1380px;
+}
+
+
+
+/*======================
+        HEADER
+======================*/
+header{
+    position: relative;
+    max-width: 1360px;
+    padding: 0 0rem;
+    margin: 0 auto;
+    color:#000;
+}
+
+header .header__menu{
+display: flex;
+justify-content: space-between;
+
+position: absolute;
+width: 100%;
+z-index: 10;
+top:0;
+left:0;
+padding: 2rem 3rem;
+color: #fff;
+font-weight: bolder;
+
+}
+
+.header__menu .logo h2{
+    font-weight:600;
+}
+
+.header__menu .header__nav {
+list-style: none;
+display: flex;
+
+margin: 0;
+    
+}
+
+.header__menu .header__nav .nav__item{
+    display: block; /*Asi no queda espacio, no inline-block no tiene k ser BLOCK*/
+    padding:0.5rem;
+
+}
+
+.header__menu .header__nav .nav__item:hover{
+
+    color: rgb(238, 185, 185);
+
+
+}
+
+
+
+
+
+
+/*======================
+       HERO BANNER
+======================*/
+
+.header__hero{
+    width:100%;
+    height: 100vh;
+    background: url('https://i.postimg.cc/mDHBPC8y/2.jpg')no-repeat center center/ cover;
+    
+    position: relative;
+
+    
+}
+
+
+.header__layer{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.header__content{
+    position: relative;
+    width:100%;
+    height: 100vh;
+    z-index: 10;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__hero h1 {
+   color: #fff;
+   font-weight: bolder;
+   font-size: 3.5rem;
+}
+
+.header__hero h3 {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.banner-btn {
+    color: #fff;
+    font-size: 1.4rem;
+    padding: .5rem 1rem;
+    background-color: #d65f5f;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/*======================
+       ABOUT US
+======================*/
+
+
+.about{
+    padding-right: 9%;
+    padding-left: 9%;
+   width: 100%;
+}
+.about h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.about__container{
+    width: 100%;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+    height: 300px;
+
+    margin-top: 2rem;
+}
+
+.about__img{
+	flex-basis: 40%;
+	background: url('https://i.postimg.cc/gJPBKhGD/1.jpg') no-repeat center center/ cover;
+    height: 290px;
+    padding: 20px;
+    background-clip: content-box;
+}
+
+.about__content{
+	flex-basis: 60%;
+    padding: 20px;
+}
+
+.about__content h3{
+	text-align: left;
+    margin-bottom: 1rem;
+}
+
+.about__content p{
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+
+/*======================
+       SERVICES
+======================*/
+
+
+.services{
+    padding-right: 9%;
+    padding-left: 9%;
+   width: 100%;
+   background-color: #ccc;
+}
+.services h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.services__container{
+    width: 100%;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+    margin-top: 3rem;
+}
+
+.service{
+	flex-basis: 33%;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+.service i{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--icon-color);
+}
+.service h4{
+    margin-bottom: 1rem;
+}
+
+.service p{
+    margin-bottom: 1rem;
+    line-height: 3;
+}
+
+
+
+/*======================
+       CONTACT
+======================*/
+
+
+.contact{
+    padding-right: 9%;
+    padding-left: 9%;
+    width: 100%;
+
+}
+.contact h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.contact__container{
+    width: 100%;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+    margin-top: 3rem;
+}
+
+.contact__address, .contact__phone, .contact__email{
+	flex-basis: 33%;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+.contact__container i{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--icon-color);
+}
+.contact__container h4{
+    margin-bottom: 1rem;
+}
+
+.contact__container p{
+    margin-bottom: 1rem;
+    line-height: 3;
+}
+
+/*======================
+      FOOTER
+======================*/
+footer{
+    padding: 3rem 9%;
+    background-color: #000;
+}
+footer p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+/*
+todo lo k hemos aprendido
+
+-a diplay:block
+-after content"" para agregar transparencia.
+section 5rem 1rem/9%
+header 0 rem 1-2rem
+
+:root --bg-color --theme-color var(--theme-color)
+
+header  footer
+main section h2 section__container boxes 
+flex-basis: 33% o 50%
+
+background- cover-fit
+
+
+
+*/
